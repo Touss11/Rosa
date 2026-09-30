@@ -1,0 +1,19 @@
+[project]
+name = "rosa"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Toussaint Huillery", email = "huillert@mcmaster.ca" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=2.0.2",
+]
+
+[project.scripts]
+rosa = "rosa:main"
+
+[build-system]
+requires = ["uv_build>=0.12.12,<0.13.0"]
+build-backend = "uv_build"

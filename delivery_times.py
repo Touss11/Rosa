@@ -1,3 +1,9 @@
+from data import ZONES, TIME_BLOCKS, PROMISE, _BASE_ORDERS, _BASE_MEDIAN
+from data import _share
+from data import _expected_orders
+
+import numpy as np  
+
 def delivery_times(zone, time_block, promise=PROMISE, seed=None):
     """Simulate four weeks of orders in one zone and time block.
 
