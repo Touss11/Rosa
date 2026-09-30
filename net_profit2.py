@@ -1,6 +1,3 @@
-from data import ZONES, TIME_BLOCKS, COSTS
-from costs import get_single_numeric_input
-from promises import get_numeric_list_from_user
 from delivery_times import delivery_times
 
 
@@ -27,22 +24,16 @@ def calculate_net_profits(
             - late_deliveries * late_order_cost
         )
 
-        results.append(
-            {
-                "zone": zone,
-                "time_block": time_block,
-                "promise": promise,
-                "net_profit": net_profit,
-                "late_deliveries": late_deliveries,
-                "on_time_deliveries": on_time_deliveries,
-            }
-        )
+        results.append({
+            "zone": zone,
+            "time_block": time_block,
+            "promise": promise,
+            "net_profit": net_profit,
+            "late_deliveries": late_deliveries,
+            "on_time_deliveries": on_time_deliveries,
+        })
 
-    return sorted(
-        results,
-        key=lambda result: result["net_profit"],
-        reverse=True,
-    )
+    return sorted(results, key=lambda result: result["net_profit"], reverse=True)
 
 
 def recommend_promised_time(
@@ -63,6 +54,6 @@ def recommend_promised_time(
     )
 
     if not results:
-        raise ValueError("At least one promise value is required.")
+        raise ValueError("No promise values were provided.")
 
     return results[0]
