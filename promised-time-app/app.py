@@ -1,6 +1,7 @@
+from src.calculator import calculate_recommended_time
+
 import streamlit as st
 
-from src.calculator import calculate_recommended_time
 from src.constants import ZONES, TIME_BLOCKS
 
 
