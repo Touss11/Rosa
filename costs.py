@@ -1,3 +1,5 @@
+from data import COSTS
+
 def get_single_numeric_input(prompt_message):
     while True:
         user_input = input(prompt_message)
@@ -6,7 +8,7 @@ def get_single_numeric_input(prompt_message):
         except ValueError:
             print("Invalid input. Please enter a numerical value.")
 
-print("Current COSTS:", COSTS)
+print("Current Costs:", COSTS)
 
 # Get new values from the user
 new_refund = get_single_numeric_input("Enter new refund value: ")
@@ -18,4 +20,4 @@ COSTS['refund'] = new_refund
 COSTS['churn_orders'] = new_churn_orders
 COSTS['margin'] = new_margin
 
-print("Updated COSTS:", COSTS)
+print("Updated Costs:", COSTS)
